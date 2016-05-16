@@ -2,8 +2,8 @@
 namespace samson\minify;
 
 use samson\core\ExternalModule;
-use samson\resourcer\ResourceRouter;
 use samsonphp\event\Event;
+use samsonphp\resource\Router;
 
 /**
  * Интерфейс для подключения модуля в ядро фреймворка SamsonPHP
@@ -22,7 +22,7 @@ class Minify extends ExternalModule
 	 */
 	public function prepare()
 	{
-		Event::subscribe(ResourceRouter::EVENT_CREATED, array($this, 'renderer'));
+		Event::subscribe(Router::EVENT_CREATED, array($this, 'renderer'));
 
 		return parent::prepare();
 	}

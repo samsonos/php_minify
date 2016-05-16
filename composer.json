@@ -14,7 +14,7 @@
     ],
     "require": {
         "samsonos/php_core": "1.*",
-        "samsonos/php_resourcer":"*"
+        "samsonphp/resource":"*"
     },
     "require-dev": {
         "phpunit/phpunit": "4.*"
